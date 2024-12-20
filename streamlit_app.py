@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-img = st.image('logioto77.jpg')
+
 
 import streamlit as st
 
