@@ -23,6 +23,37 @@ docs = loader.load()
 print("")
 print(len(docs))
 print("")
+print(f"{docs[0].page_content[:200]}\n")
+print("")
+print(docs[0].metadata)
+print("")
+
+# Splitting
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000, chunk_overlap=200, add_start_index=True
+)
+all_splits = text_splitter.split_documents(docs)
+print("")
+print("numero de split que se formaron:")
+print(len(all_splits))
+print("")
+
+# Embeddings
+from langchain_openai import OpenAIEmbeddings
+
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+vector_1 = embeddings.embed_query(all_splits[0].page_content)
+vector_2 = embeddings.embed_query(all_splits[1].page_content)
+
+assert len(vector_1) == len(vector_2)
+print("")
+print(f"Generated vectors of length {len(vector_1)}\n")
+print(vector_1[:10])
+print("")
+
+
 
 ##############################################################################################################################
 #                                                 listo habla normal  
