@@ -4,3 +4,5 @@ requests
 openai
 openpyxl
 matplotlib
+langchain-community
+pypdf

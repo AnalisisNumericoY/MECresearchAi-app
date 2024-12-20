@@ -10,6 +10,23 @@ st.logo("logioto77.jpg")
 
 client = OpenAI(api_key = st.secrets["OPENAI_API_KEY"])
 
+##############################################################################################################################
+#                                                 Entrenar con pdf
+##############################################################################################################################
+from langchain_core.documents import Document
+from langchain_community.document_loaders import PyPDFLoader
+
+file_path = "./data_ejemplo/keramatian-et-al-2023-the-canmat-and-isbd-guidelines-for-the-treatment-of-bipolar-disorder-summary-and-a-2023-update-of.pdf"
+loader = PyPDFLoader(file_path)
+
+docs = loader.load()
+print("")
+print(len(docs))
+print("")
+
+##############################################################################################################################
+#                                                 listo habla normal  
+##############################################################################################################################
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-4o-mini"
 
