@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
-img = Image.open('logioto77.jpg')
-#st.beta_set_page_config(page_title='MEC ia', page_icon=img) #page_icon=':smiley:'
+img = st.image('logioto77.jpg')
 
 import streamlit as st
 
