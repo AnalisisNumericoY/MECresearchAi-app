@@ -6,7 +6,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="medicina computacional llm",
-    page_icon=img,
+    page_icon='logioto77.jpg',
     layout="wide")
 
 
