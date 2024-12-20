@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("🎈 large language model ")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "inspirado por Medicina Computacional [https://www.medicinacomputacional.com/](https://www.medicinacomputacional.com/)."
 )
